@@ -1,0 +1,22 @@
+{
+  "name": "qlutch_splash",
+  "version": "1.0.0",
+  "description": "QLutch splash page",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lrod8/Qlutch.git"
+  },
+  "author": "QLutch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lrod8/Qlutch/issues"
+  },
+  "homepage": "https://github.com/lrod8/Qlutch#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
