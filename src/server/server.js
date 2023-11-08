@@ -1,15 +1,26 @@
+require("dotenv").config();
 const path = require('path');
 const express = require('express');
+const { graphqlHTTP } = require('express-graphql');
+const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql');
+const schema = require("./schema/schema");
+const PORT = process.env.PORT || 4000;
 const app = express();
-const PORT = 3000;
 
 app.use(express.json());
+app.use(express.static('assets'));
 
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
-app.use(express.static('assets'));
+app.use(
+    '/graphql',
+    graphqlHTTP({
+        schema,
+        graphiql: true
+    })
+);
 
 app.use((req, res) => {
     res.status(404).send('Page not found');

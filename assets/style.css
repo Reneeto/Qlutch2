@@ -61,7 +61,7 @@ nav ul li {
 .container-home {
     display: flex;
     margin-top: 353px;
-    margin-left: 120px;
+    margin-left: 75px;
 }
 
 h1 {
@@ -101,6 +101,18 @@ h1 {
     line-height: 100%;
     letter-spacing: -0.4px;
     margin-top: 55px;
+}
+
+.home-main button a {
+    text-decoration: none;
+}
+
+.home-main button a:link {
+    color: #000;
+}
+
+.home-main button a:visited {
+    color: #000;
 }
 
 .feature {
@@ -313,10 +325,6 @@ h2 {
 
 .profile svg {
     margin-top: 22px;
-}
-
-.github {
-
 }
 
 .linkedin {
