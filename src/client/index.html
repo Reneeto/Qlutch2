@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,25 +10,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#top">Home</a></li>
             <li> <a href="#feature">Feature</a></li>
             <li><a href="#flow">Flow</a></li>
             <li><a href="#doc">Doc</a></li>
             <li><a href="#team">Team</a></li>
         </ul>
     </nav>
-    <div class="container-home" id="home">
-        <img src="logo.png" alt="qlutch logo">
+    
+    <div class="logo-container">
+        <img src="logo.png" alt="qlutch logo" id="logo">
+    </div>
+
+    <div class="container-home">
         <div class="home-main">
             <h1>The lightweight caching solution for GraphQL developers</h1>
             <button>Try Demo</button>
         </div>
     </div>
+
+    <section id="feature"></section>
     <div class="feature">
-        <h2 id="feature">A Javascript library to simplify GraphQL caching</h2>
+        <h2>A Javascript library to simplify GraphQL caching</h2>
         <div class="feature-main">
             <div class="feature-articles">
                 <span class="header">Lightning-fast Caching</span><br>
@@ -35,19 +44,23 @@
                 <span class="header">Enhanced Query Efficiency</span><br>
                 <span class="paragraph">Make precise queries to retrieve your data with reduced cache misses.</span><br><br>
                 <span class="header">Robust Caching Strategies</span><br>
-                <span class="paragraph">Quell's cache invalidation and normalization strategies means your app will always stay fast, without any bloat.</span><br>
+                <span class="paragraph">QLutch's cache invalidation and normalization strategies means your app will always stay fast, without any bloat.</span><br>
             </div>
             <img id="barchart" src="bar_graph.png" alt="bar graph">
         </div>
     </div>
-    <div class="flow-container" id="flow">
+
+    <section id="flow"></section>
+    <div class="flow-container">
         <h2>QLutch Data Flow</h2>
         <div class="flow-imgs">
             <img src="data_flow_bg.png" alt="data flow background" id="dataflow-bg">
             <img src="data_flow.png" alt="data flow chart" id="dataflow">
         </div>
     </div>
-    <div class="doc-container" id="doc">
+
+    <section id="doc"></section>
+    <div class="doc-container">
         <h2>How to QLutch?</h2>
         <p>To install and save in your package.json dependencies, run the command below using npm:</p>
 
@@ -90,10 +103,10 @@
                   </svg>
             </div>
         </a>
-
     </div>
 
-    <div class="team-container" id="team">
+    <section id="team"></section>
+    <div class="team-container">
         <h2>Meet The Team</h2>
         <p>To install and save in your package.json dependencies, run the command below using npm:</p>
         <div class="profile-container">

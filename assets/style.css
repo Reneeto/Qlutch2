@@ -2,12 +2,18 @@ body {
     background-color: #082F37;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 nav {
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #082F37
+    height: 259px;
+    flex-shrink: 0;
+    background: linear-gradient(180deg, #082F37 43.24%, rgba(8, 47, 55, 0.00) 97.88%);
 }
 
 nav a {
@@ -29,7 +35,7 @@ nav ul{
     color: #FFF;
     font-family: Rajdhani;
     font-size: 20px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 100%; 
     letter-spacing: -0.5px;
 }
@@ -39,23 +45,30 @@ nav ul li {
     padding: 30px;
 }
 
-.container-home {
-    display: flex;
-    margin-top: 355px;
+.logo-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0; 
 }
 
-.container-home img {
+#logo {
     width: 156px;
-    height: 42px;
     flex-shrink: 0;
     margin-left: 80px;
+    margin-top: 358px;
+}
+
+.container-home {
+    display: flex;
+    margin-top: 353px;
+    margin-left: 120px;
 }
 
 h1 {
     color: #FFF;
     font-family: Rajdhani;
     font-size: 56px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 110%; 
     letter-spacing: -1.12px;
     width: 630px;
@@ -103,7 +116,7 @@ h2 {
     color: #FFF;
     font-family: Rajdhani;
     font-size: 56px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 110%; 
     letter-spacing: -1.12px;   
     margin: 0px;
