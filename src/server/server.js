@@ -6,7 +6,7 @@ const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql');
 const schema = require("./schema/schema");
 const PORT = process.env.PORT || 4000;
 const app = express();
-const redis = require('redis');
+const redis = require('./redis');
 const qlutch = require('qlutch');
 
 app.use(express.json());
@@ -15,10 +15,12 @@ app.use(express.static(path.resolve('node_modules/qlutch/dist')));
 
 app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'));
+    console.log('home path: ', path.resolve('/client/index.html'))
 });
 
 app.get('/dashboard', (req, res) => {
     res.sendFile(path.resolve('node_modules/qlutch/dist/index.html'));
+    console.log('dashboard path: ',path.resolve('node_modules/qlutch/dist/index.html'))
 })
 
 app.use(
