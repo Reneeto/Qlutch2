@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #082F37;
 }
@@ -62,6 +66,8 @@ nav ul li {
     display: flex;
     margin-top: 353px;
     margin-left: 75px;
+    flex-direction: column;
+    align-items: center;
 }
 
 h1 {
@@ -74,14 +80,12 @@ h1 {
     width: 630px;
     height: 185px;
     margin: 0px;
-    align-items: center;
 }
 
 .home-main {
-    display: flex;
-    flex-direction: column;
-    margin-left: 510px;
+    margin-left: 120px;
 }
+
 
 .home-main button {
     display: inline-flex;
