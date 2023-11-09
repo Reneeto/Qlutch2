@@ -16,16 +16,16 @@ app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/index.html'));
 });
 
-app.use(
-    '/graphql',
-    qlutch('http://localhost:4000/actualgraphql', redis),
-    (req, res) => {
-        return res.json(res.locals.response);
-    } 
-);
+// app.use(
+//     '/graphql',
+//     qlutch('http://localhost:4000/actualgraphql', redis),
+//     (req, res) => {
+//         return res.json(res.locals.response);
+//     } 
+// );
 
 app.use(
-    '/actualgraphql',
+    '/graphql',
     graphqlHTTP({
         schema,
         graphiql: true
