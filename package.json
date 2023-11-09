@@ -21,6 +21,7 @@
     "express-graphql": "^0.12.0",
     "graphql": "^15.8.0",
     "mongoose": "^8.0.0",
+    "qlutch": "^1.0.3",
     "redis": "^4.6.10"
   },
   "devDependencies": {

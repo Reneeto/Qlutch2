@@ -6,6 +6,8 @@ const { GraphQLSchema, GraphQLObjectType, GraphQLString } = require('graphql');
 const schema = require("./schema/schema");
 const PORT = process.env.PORT || 4000;
 const app = express();
+const redis = require('redis');
+const qlutch = require('qlutch');
 
 app.use(express.json());
 app.use(express.static('assets'));
@@ -16,6 +18,14 @@ app.get('/', (req, res) => {
 
 app.use(
     '/graphql',
+    qlutch('http://localhost:4000/actualgraphql', redis),
+    (req, res) => {
+        return res.json(res.locals.response);
+    } 
+);
+
+app.use(
+    '/actualgraphql',
     graphqlHTTP({
         schema,
         graphiql: true
