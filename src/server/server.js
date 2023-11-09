@@ -11,16 +11,14 @@ const qlutch = require('qlutch');
 
 app.use(express.json());
 app.use(express.static('assets'));
-// app.use(express.static('/Users/michaelweckop/Desktop/CODESMITH/PROJECTS/QLutchWebsite/Qlutch/node_modules/qlutch/dist'));
-app.use(express.static(path.resolve(__dirname, 'node_modules/qlutch/dist')));
+app.use(express.static(path.resolve('node_modules/qlutch/dist')));
 
 app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
 app.get('/dashboard', (req, res) => {
-    // res.sendFile('/Users/michaelweckop/Desktop/CODESMITH/PROJECTS/QLutchWebsite/Qlutch/node_modules/qlutch/dist/index.html');
-    res.sendFile(path.resolve(__dirname,'node_modules/qlutch/dist/index.html'));
+    res.sendFile(path.resolve('node_modules/qlutch/dist/index.html'));
 })
 
 app.use(
