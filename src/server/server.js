@@ -11,18 +11,25 @@ const qlutch = require('qlutch');
 
 app.use(express.json());
 app.use(express.static('assets'));
+// app.use(express.static('/Users/michaelweckop/Desktop/CODESMITH/PROJECTS/QLutchWebsite/Qlutch/node_modules/qlutch/dist'));
+app.use(express.static(path.resolve(__dirname, 'node_modules/qlutch/dist')));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../client/index.html'));
+app.get('/home', (req, res) => {
+    res.sendFile(path.join(__dirname, '../client/index.html'));
 });
 
-// app.use(
-//     '/graphql',
-//     qlutch('http://localhost:4000/actualgraphql', redis),
-//     (req, res) => {
-//         return res.json(res.locals.response);
-//     } 
-// );
+app.get('/dashboard', (req, res) => {
+    // res.sendFile('/Users/michaelweckop/Desktop/CODESMITH/PROJECTS/QLutchWebsite/Qlutch/node_modules/qlutch/dist/index.html');
+    res.sendFile(path.resolve(__dirname,'node_modules/qlutch/dist/index.html'));
+})
+
+app.use(
+    '/qlutch',
+    qlutch('http://localhost:4000/graphql', redis),
+    (req, res) => {
+        return res.json(res.locals.response);
+    }
+);
 
 app.use(
     '/graphql',
