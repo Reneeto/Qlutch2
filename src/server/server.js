@@ -15,12 +15,10 @@ app.use(express.static(path.resolve('node_modules/qlutch/dist')));
 
 app.get('/home', (req, res) => {
     res.sendFile(path.join(__dirname, '../client/index.html'));
-    console.log('home path: ', path.resolve('/client/index.html'))
 });
 
 app.get('/dashboard', (req, res) => {
     res.sendFile(path.resolve('node_modules/qlutch/dist/index.html'));
-    console.log('dashboard path: ',path.resolve('node_modules/qlutch/dist/index.html'))
 })
 
 app.use(
